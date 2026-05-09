@@ -1,0 +1,2 @@
+"ROUND(AVG(`Running Time`))",ROUND(AVG(Budget)),"ROUND(AVG(`Box Office`))",ROUND(AVG(Earnings)),"ROUND( AVG(`IMDb score`))"
+119,104805000,329985000,225180000,7

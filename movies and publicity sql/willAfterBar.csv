@@ -1,0 +1,3 @@
+Movie,Director,"Running time","Actor 1","Actor 2","Actor 3",Genre,Budget,"Box Office","Actors Box Office %","Director Box Office %",Earnings,"Oscar and Golden Globes nominations","Oscar and Golden Globes awards","Release year","IMDb score"
+Emancipation,NULL,NULL,"Will Smith",NULL,NULL,NULL,141000000,112500000,NULL,NULL,-28500000,NULL,NULL,2022,6.3
+"Bad Boys: Ride or Die",NULL,NULL,"Will Smith",NULL,NULL,NULL,100000000,450000000,NULL,NULL,305000000,NULL,NULL,2024,6.5
