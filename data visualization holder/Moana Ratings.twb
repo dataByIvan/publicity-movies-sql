@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='moanaTable' inline='true' name='federated.0j2kpij10wbcyh16zs10z1aald58' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='moanaTable' name='textscan.1hiy1h21ab41i413xjpuu03l1r4t'>
+            <connection class='textscan' directory='E:/movies and publicity sql' filename='moanaTable.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1hiy1h21ab41i413xjpuu03l1r4t' name='moanaTable.csv' table='[moanaTable#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='title' ordinal='0' />
+            <column datatype='integer' name='budget' ordinal='1' />
+            <column datatype='real' name='vote_average' ordinal='2' />
+            <column datatype='integer' name='revenue' ordinal='3' />
+            <column datatype='integer' name='profit' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[moanaTable.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[moanaTable.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>budget</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[budget]</local-name>
+            <parent-name>[moanaTable.csv]</parent-name>
+            <remote-alias>budget</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vote_average</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[vote_average]</local-name>
+            <parent-name>[moanaTable.csv]</parent-name>
+            <remote-alias>vote_average</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[moanaTable.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[profit]</local-name>
+            <parent-name>[moanaTable.csv]</parent-name>
+            <remote-alias>profit</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='moanaTable.csv' datatype='table' name='[__tableau_internal_object_id__].[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]' role='measure' type='quantitative' />
+      <column caption='Budget' datatype='integer' name='[budget]' role='measure' type='quantitative' />
+      <column caption='Profit' datatype='integer' name='[profit]' role='measure' type='quantitative' />
+      <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Vote Average' datatype='real' name='[vote_average]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/icsti/AppData/Local/Temp/TableauTemp/#TableauTemp_0tc8vqd1qgg58l12no7wb0k0kq9t.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/10/2026 06:16:23 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>0</ordinal>
+              <family>moanaTable.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>budget</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[budget]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>budget</remote-alias>
+              <ordinal>1</ordinal>
+              <family>moanaTable.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vote_average</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[vote_average]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vote_average</remote-alias>
+              <ordinal>2</ordinal>
+              <family>moanaTable.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue</remote-alias>
+              <ordinal>3</ordinal>
+              <family>moanaTable.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>profit</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[profit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>profit</remote-alias>
+              <ordinal>4</ordinal>
+              <family>moanaTable.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='moanaTable.csv' id='moanaTable.csv_DA1CE0DBA3F448709D5BD70E191A3D3D'>
+            <properties context=''>
+              <relation connection='textscan.1hiy1h21ab41i413xjpuu03l1r4t' name='moanaTable.csv' table='[moanaTable#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='title' ordinal='0' />
+                  <column datatype='integer' name='budget' ordinal='1' />
+                  <column datatype='real' name='vote_average' ordinal='2' />
+                  <column datatype='integer' name='revenue' ordinal='3' />
+                  <column datatype='integer' name='profit' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='moanaTable' name='federated.0j2kpij10wbcyh16zs10z1aald58' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0j2kpij10wbcyh16zs10z1aald58'>
+            <column caption='Budget' datatype='integer' name='[budget]' role='measure' type='quantitative' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Profit' datatype='integer' name='[profit]' role='measure' type='quantitative' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[budget]' derivation='Sum' name='[sum:budget:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[profit]' derivation='Sum' name='[sum:profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0j2kpij10wbcyh16zs10z1aald58].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0j2kpij10wbcyh16zs10z1aald58].[sum:budget:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0j2kpij10wbcyh16zs10z1aald58].[sum:profit:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0j2kpij10wbcyh16zs10z1aald58].[sum:revenue:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0j2kpij10wbcyh16zs10z1aald58].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0j2kpij10wbcyh16zs10z1aald58].[Multiple Values]</rows>
+        <cols>([federated.0j2kpij10wbcyh16zs10z1aald58].[:Measure Names] / [federated.0j2kpij10wbcyh16zs10z1aald58].[none:title:nk])</cols>
+      </table>
+      <simple-id uuid='{33A9FFBF-660C-4A03-93FA-AD6EF537C7D2}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='moanaTable' name='federated.0j2kpij10wbcyh16zs10z1aald58' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0j2kpij10wbcyh16zs10z1aald58'>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[vote_average]' derivation='Sum' name='[sum:vote_average:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+            <column caption='Vote Average' datatype='real' name='[vote_average]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0j2kpij10wbcyh16zs10z1aald58].[sum:vote_average:qk]</rows>
+        <cols>([federated.0j2kpij10wbcyh16zs10z1aald58].[:Measure Names] / [federated.0j2kpij10wbcyh16zs10z1aald58].[none:title:nk])</cols>
+      </table>
+      <simple-id uuid='{30CE8CB7-4BE2-4265-8531-EFE8E0244003}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0j2kpij10wbcyh16zs10z1aald58].[:Measure Names]</field>
+            <field>[federated.0j2kpij10wbcyh16zs10z1aald58].[none:title:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B8B2D4A3-3586-4E0F-B598-31425B79594D}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='86'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-height' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0j2kpij10wbcyh16zs10z1aald58].[:Measure Names]</field>
+            <field>[federated.0j2kpij10wbcyh16zs10z1aald58].[none:title:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{27431A00-91D5-44ED-87FC-799CDB55930B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='187'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

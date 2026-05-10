@@ -131,7 +131,7 @@ FROM dwayneadtime
 GROUP BY `Year`
 ORDER BY `Year`;
 
-
+--  (api.themoviedb.org)
 DESCRIBE dwayne;
 SELECT COUNT(*) FROM dwayne;
 SELECT * FROM dwayne;
@@ -140,17 +140,96 @@ SELECT DISTINCT(YEAR(release_date)) FROM dwayne;
 
 SELECT * FROM dwayne;
 
+
+SELECT COUNT(*) 
+FROM dwayne; -- 49
+
+SELECT COUNT(*) 
+FROM dwayne
+WHERE release_year < 2020; -- 39
+
+SELECT COUNT(*) 
+FROM dwayne
+WHERE release_year >= 2020; -- 10? --- > updated to 8
+
+ -- I see, so basically there were films where he made cameos and voiced a small character, we should not include that.
+ DELETE FROM dwayne
+ WHERE title IN ('Free Guy', 'Fast X');
+ 
+SELECT *
+FROM dwayne
+WHERE release_year >= 2020;
+
 SELECT DISTINCT(YEAR(STR_TO_DATE(release_date, '%m/%d/%Y'))) AS `Year` 
 FROM dwayne
 ORDER BY `Year`;
 
-CREATE TABLE dwaynebefore AS
-SELECT (YEAR(STR_TO_DATE(release_date, '%m/%d/%Y'))) AS `Year`, vote_average, revenue, budget
+CREATE TABLE dwayneRelevant AS
+SELECT title, release_year, budget, revenue, vote_average, popularity, profit
 FROM dwayne
-WHERE (YEAR(STR_TO_DATE(release_date, '%m/%d/%Y'))) < 2020
-ORDER BY `Year`;
+ORDER BY release_year;
 
-SELECT * FROM dwaynebefore;
+SELECT * FROM dwayneRelevant;
+SELECT * FROM dwayneRelevant WHERE title = 'moana 2';
+
+UPDATE dwayneRelevant
+SET vote_average = 6.8
+WHERE title = 'Moana 2';
+
+SELECT * FROM dwayneRelevant WHERE title = 'Red Notice';
+-- https://www.the-numbers.com/movie/Red-Notice-(2020)
+
+UPDATE dwayneRelevant
+SET revenue = 173638
+WHERE title = 'Red Notice';
+
+SELECT * FROM dwayneRelevant WHERE title = 'Red Notice';
+
+SELECT * FROm dwayneRelevant;
+
+SELECT release_year, ROUND(AVG(budget)) AS avgBudget, ROUND(AVG(revenue)) AS avgRevenue, ROUND(AVG(vote_average)) AS avgVote, ROUND(AVG(popularity)) AS avgPopularity, ROUND( AVG(profit)) AS avgProfit
+FROM dwayneRelevant
+GROUP BY release_year
+ORDER BY release_year;
+
+SELECT ROUND(AVG(budget)) AS avgBudget ,  ROUND(AVG(revenue)) AS avgRevenue,  ROUND(AVG(vote_average)) AS avgVote, ROUND(AVG(popularity)) AS avgPopularity, ROUND( AVG(profit)) AS avgProfits
+FROM dwayneRelevant
+WHERE release_year < 2020;
+/*
+Before controversy (2020) averages:
+Avg Budget: $78 million
+Avg Revenue: $310.6 million
+Avg Vote: 6/10
+Avg Popularity: 5
+Avg Profit: $232.3 million
+*/
+
+SELECT ROUND(AVG(budget)) AS avgBudget ,  ROUND(AVG(revenue)) AS avgRevenue,  ROUND(AVG(vote_average)) AS avgVote, ROUND(AVG(popularity)) AS avgPopularity, ROUND( AVG(profit)) AS avgProfits
+FROM dwayneRelevant
+WHERE release_year >= 2020;
+/*
+Avg Budget: $156.3 million
+Avg Revenue: $493.9 million
+Avg Vote:7 / 10
+Avg Popularity: 21
+Avg Profit:  $337.7 million
+*/
+
+SELECT ROUND(AVG(budget)) AS avgBudget ,  ROUND(AVG(revenue)) AS avgRevenue,  ROUND(AVG(vote_average)) AS avgVote, ROUND(AVG(popularity)) AS avgPopularity, ROUND( AVG(profit)) AS avgProfits
+FROM dwayneRelevant
+WHERE release_year = 2022;
+/*
+YEAR where dwayne "the ad" johnson was most popular 2022
+Avg Budget:$145.0 million
+Avg Revenue:$298.2 million
+Avg Vote:7 / 10
+Avg Popularity:  11
+Avg Profit:$153.2 million
+*/
+SELECT * FROM dwayneRelevant;
+SELECT release_year, ROUND(AVG(budget)) AS avgBudget ,  ROUND(AVG(revenue)) AS avgRevenue,  ROUND(AVG(vote_average)) AS avgVote, ROUND(AVG(popularity)) AS avgPopularity, ROUND( AVG(profit)) AS avgProfits
+FROM dwayneRelevant
+GROUP BY release_year; -- line plot
 
 SELECT  AVG(vote_average) AS averageVote, AVG(revenue) AS avg_revenue, AVG(budget) as avg_budget
 FROM dwaynebefore
@@ -165,7 +244,11 @@ FROM dwayne
 WHERE (YEAR(STR_TO_DATE(release_date, '%m/%d/%Y'))) >= 2020
 ORDER BY `Year`;
 
-SELECT * FROM dwayneafter;
+ UPDATE dwayneafter
+SET revenue = 173638;
+
+SELECT *, revenue - budget AS profit
+FROM dwayneafter;
 
 SELECT  AVG(vote_average), AVG(revenue), AVG(budget)
 FROM dwayneafter
@@ -173,15 +256,22 @@ FROM dwayneafter
 ORDER BY `Year`;
 
 /*
-Before Average:
- Avg Vote:     6.1 / 10
-  Avg Revenue:  $308.8 million
-  Avg Budget:   $78.7 million
+
+Before controversy (2020) averages:
+Avg Vote:     6.1 / 10
+Avg Revenue:  $308.8 million
+Avg Budget:   $78.7 million
+
 
 After Average:
 Vote : 5.9
 Revenue: $430.2 million
 Budget:  $197.0 million
+
+Afer Average without Moana 2:
+Avg Vote: 7.2 / 10
+Avg Revenue: $304.4 million
+Avg Budget: $206.0 million
 
 */
 SELECT AVG(vote_average), AVG(revenue), AVG(budget)
@@ -237,4 +327,12 @@ Revenue: $1.059 billion
 Budget: $150.0 million
 Vote:   6.3 / 10  (no rating data in dataset, but oneline says 6.3) -- > budget stayed the same, revenue went up by almost 2x, but vote went down
 */
+
+SELECT DISTINCT(YEAR(STR_TO_DATE(release_date, '%m/%d/%Y'))) AS `Year` 
+FROM dwayne
+ORDER BY `Year`;
+
+-- The data set contains a lot of incorrect information looking deeper into it
+-- Like Young Rock -- > 1959 release date was realeased 2021, and there are a lot of 0's rather than nulls for metrics, we'll have to use a more reliable data set
+
 
