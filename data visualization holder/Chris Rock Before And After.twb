@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='chris joined' inline='true' name='federated.1a2cr420w1jv6j1blwm3z0bvcv5w' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='chris joined' name='textscan.0ruxb4p1v7cjtn17ky50c082djq7'>
+            <connection class='textscan' directory='/Users/ivanyu/Downloads' filename='chris joined.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ruxb4p1v7cjtn17ky50c082djq7' name='chris joined.csv' table='[chris joined#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Before' ordinal='0' />
+            <column datatype='integer' name='budget' ordinal='1' />
+            <column datatype='integer' name='revenue' ordinal='2' />
+            <column datatype='integer' name='runtime' ordinal='3' />
+            <column datatype='integer' name='vote' ordinal='4' />
+            <column datatype='integer' name='popularity' ordinal='5' />
+            <column datatype='integer' name='profit' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Before</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Before]</local-name>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias>Before</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>budget</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[budget]</local-name>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias>budget</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>runtime</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[runtime]</local-name>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias>runtime</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vote</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vote]</local-name>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias>vote</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popularity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[popularity]</local-name>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias>popularity</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[profit]</local-name>
+            <parent-name>[chris joined.csv]</parent-name>
+            <remote-alias>profit</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='chris joined.csv' datatype='table' name='[__tableau_internal_object_id__].[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]' role='measure' type='quantitative' />
+      <column caption='Budget' datatype='integer' name='[budget]' role='measure' type='quantitative' />
+      <column caption='Popularity' datatype='integer' name='[popularity]' role='measure' type='quantitative' />
+      <column caption='Profit' datatype='integer' name='[profit]' role='measure' type='quantitative' />
+      <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+      <column caption='Runtime' datatype='integer' name='[runtime]' role='measure' type='quantitative' />
+      <column caption='Vote' datatype='integer' name='[vote]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/rf/l37tf8fs08xdhdq30_91thtr0000gn/T/tableau-temp/#TableauTemp_1c35cud0aa3mcu153zaz50cvxoys.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/11/2026 01:27:30 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Before</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Before]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Before</remote-alias>
+              <ordinal>0</ordinal>
+              <family>chris joined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>budget</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[budget]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>budget</remote-alias>
+              <ordinal>1</ordinal>
+              <family>chris joined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue</remote-alias>
+              <ordinal>2</ordinal>
+              <family>chris joined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>runtime</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[runtime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>runtime</remote-alias>
+              <ordinal>3</ordinal>
+              <family>chris joined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vote</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vote]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vote</remote-alias>
+              <ordinal>4</ordinal>
+              <family>chris joined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>popularity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[popularity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>popularity</remote-alias>
+              <ordinal>5</ordinal>
+              <family>chris joined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>profit</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[profit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>profit</remote-alias>
+              <ordinal>6</ordinal>
+              <family>chris joined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='chris joined.csv' id='chris joined.csv_9FF6C585DE4F42D9BD48ABD6A091348B'>
+            <properties context=''>
+              <relation connection='textscan.0ruxb4p1v7cjtn17ky50c082djq7' name='chris joined.csv' table='[chris joined#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Before' ordinal='0' />
+                  <column datatype='integer' name='budget' ordinal='1' />
+                  <column datatype='integer' name='revenue' ordinal='2' />
+                  <column datatype='integer' name='runtime' ordinal='3' />
+                  <column datatype='integer' name='vote' ordinal='4' />
+                  <column datatype='integer' name='popularity' ordinal='5' />
+                  <column datatype='integer' name='profit' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Chris Rock Before and After Controversy</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='chris joined' name='federated.1a2cr420w1jv6j1blwm3z0bvcv5w' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2cr420w1jv6j1blwm3z0bvcv5w'>
+            <column datatype='string' name='[Before]' role='dimension' type='nominal' />
+            <column-instance column='[Before]' derivation='None' name='[none:Before:nk]' pivot='key' type='nominal' />
+            <column caption='Profit' datatype='integer' name='[profit]' role='measure' type='quantitative' />
+            <column-instance column='[profit]' derivation='Sum' name='[sum:profit:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[vote]' derivation='Sum' name='[sum:vote:qk]' pivot='key' type='quantitative' />
+            <column caption='Vote' datatype='integer' name='[vote]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <slices>
+            <column>[federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[sum:profit:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[sum:vote:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#666666' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[sum:profit:qk] + [federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[sum:vote:qk])</rows>
+        <cols>[federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[none:Before:nk]</cols>
+      </table>
+      <simple-id uuid='{5E995DD8-EA3E-4BE0-B73B-98207AD9B23A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[:Measure Names]</field>
+            <field>[federated.1a2cr420w1jv6j1blwm3z0bvcv5w].[none:Before:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{ED56001E-9800-46DD-9D1C-B9F511C9D001}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='374'>
+      iVBORw0KGgoAAAANSUhEUgAAAXYAAAGACAYAAAC5lUlhAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAfWUlEQVR4nO3deVDU9+H/8dciKIccgkjAEBQVtCJ4QmLENpXqpJomrcZMam1itEkmaWuS
+      xvSYzDTJTCc1TtNUR5tjam3SJHaMGa+MmaGag9ZwLB6gwWhjXMK5uCsCBRaF/f3hsD+3LDd+
+      hTfPx1/wOd+fcXjy8bOfzweL2+12CwBgDL8bPQAAwMAi7ABgGMIOAIYh7ABgGMIOAIYh7ABg
+      GMIOAIYh7ABgGMIOAIYh7ABgGMIOAIYh7ABgGMIOAIYh7ABgGMIOAIYh7OgTq9Uqq9V6o4cB
+      wAfCDgCGIewAYBjCDgCGIewAYBjCDgCGIewAYBjCDgCGIewAYBjCDgCGIewAYBj/Gz0AADde
+      dXW1zp49K4fDodGjR2v27NkaM2bMjR4W+oiwAzfYhQsXVFxc3GG6xWJRaGiowsPDNXHiRI0Y
+      MWLA993S0qKNGzdq//79amtr80zfuHGjFi1aNOD7w/8Nwg7cYKdOndKGDRu6XCYyMlJLly7V
+      /fffr3Hjxg3Yvjdv3qy9e/d6vg8KClJra6v8/LhKO5QRdmAIcDqdeuutt3TkyBHt2LFDQUFB
+      /d5ma2ur3n//fUlSeHi4fve732nu3Lny9ycLQx3/gsAg8vzzzyszM1OSdOXKFTmdThUVFekv
+      f/mLqqur9eWXX2r//v1auXJlv/dVWlqqlpYWSdKiRYt066239nubGBwIOzCIBAcHKywszPN9
+      ZGSkJk+erKSkJD344IOSpC+++KLT9d1ut0pLS+VwOJSUlKTRo0d3umxjY6Pn63nz5vVofJWV
+      lSorK1NCQsKAXhKSejd2dI2wA0NAYmKi5+trg9zuypUr2rx5s/bt26eGhgZJVz98nTx5sp5/
+      /nklJSV5lt23b5927Nghl8vlmfaHP/xBf/7znz3fP/3005o/f74kqa2tTTt27NA777yj2tpa
+      zzJRUVFau3Zth/892O12Pfroo5Kkhx56SMuWLVNFRYX++Mc/6ujRowoMDNQHH3zQp7GjZwg7
+      MARcG8JvfOMbXvOampr02GOPed1Z4+fnp7a2Np09e1Zr167Vyy+/7Dkrb2hoUGlpqdc2Lly4
+      0GGb0tXr8OvXr1dubm6HMTkcDr300ks6duyYXnzxRc/01tZWz/br6+tVVVWlBx98UE6nU5K8
+      7u7p7djRM4QdGKRaWlr0n//8Rx988IF27dolSUpISNDy5cu9lnv33Xc9YVy6dKl++tOfKjw8
+      XDk5Ofrtb3+rpqYmvfLKK3r77bclSXPnztUvf/lLVVZW6s033/Ssl5KS4tlmcnKyJGn37t2e
+      qMfHx+tnP/uZJkyYoLNnz+pPf/qT7Ha7srOzdccdd2jx4sUdjqG5uVlPPfWUJ+qBgYG6+eab
+      +zx29IzF7Xa7b/QgMPS0/73TuXPn3uCRDH2ffPKJfvGLX0iSQkNDNXLkSDU3N+u///2vZ5kR
+      I0bom9/8pn71q18pMjLSM72xsVFLly5VfX29Jk2apH/84x9e2/7rX/+qrVu3SpK2bdum9PR0
+      z7xTp07pgQcekCQ999xzWrZsmde6LpdLS5cuVW1traKiorRr1y6v6/92u10rVqxQY2Oj4uLi
+      tHfvXlksFlVWVuquu+6SJI0cOVItLS0aPXq01q9fr2XLlikgIKDfY0fXuFkVGETq6+vlcDi8
+      oi5JKSkpuvPOOxUaGuo1/dy5c6qvr5ckLVy4sMP2brvtNs/Xvh6C6sr58+c919RXrVrlFXVJ
+      GjdunFasWCFJqqiokN1u77CNlpYWjR07Vm+88Ya+//3ve6J+vcc+3HEpBhhEvve972ny5Mlq
+      bW1VXV2dampq9Nlnn+nEiRM6ceKEZsyYoa1btyo4OFiS9PXXX3vWHT16tI4dO+a1Pbfb7Tlr
+      rqys7NVYbDab5+tZs2b5XGbmzJmeyzk2m00xMTFe88PDw/X666/rlltu6bDu9Rz7cEfYgUEk
+      MzNTd9xxh9e0trY2vf3229q8ebOKi4v1+9//Xi+88IKkq+94abdly5Yut+3rjLor18Z07Nix
+      Ppe5dnpNTU2H+Q888IDPqEvXd+zDHWEHBjk/Pz+tXr1aH330kYqKipSXl+eZFxUV5fk6KSnJ
+      6/v/1dvbBq+N9sWLFxUbG9thmWtvf/T10rBrL738r+s59uGOsANDRPtrBBwOhxobGxUcHOx1
+      h8m3v/1trVu3bsD2l5CQ4Pn69OnTHW6zbJ/ua/meuJ5jH+748BQYAoqLi3X06FFJV8+k2yM/
+      YcIEz7td3n//fV25csXn+k1NTfrqq696tc+JEyd69vP3v/+9w7abmpq0c+dOSVJERITPM/qu
+      XM+xD3eEHRhE8vPztXfvXu3du1fvvvuutm/frt/85jdat26dLl++LElasmSJLBaLpKuXP9qf
+      /LTb7VqzZo2sVqvq6+vV0NCg4uJivfbaa1q2bJn27dvXq7GEhIRo9erVkq6+V+bxxx+XzWbz
+      PDz0yCOPeO5Pf/jhh3v9RsjrOfbhjksxwCDS/iBSZ2bPnq3HH3/ca9q6deuUk5Ojr7/+WiUl
+      JZ7H+QfC6tWr9c9//lPnzp1TYWGhli9f7nkytF1KSkqHh6Z66nqOfTjjjB24wbp6Te7o0aM1
+      adIkLVy4UC+//LJef/11jRw50muZsLAwvfvuu7r//vs9t0FeKz4+Xj//+c89DyP1RlBQkP72
+      t79p6dKlnmntUbdYLLrvvvv0xhtveL0m4Nrj6e4VwNdz7MMZT56iT3jydHByu92qrq6W3W7X
+      yJEjNX78+A4PNfVVXV2dTp8+7Xm749SpUxUSEjIg25au79iHG8KOPiHswODFpRgAMAxhBwDD
+      EHYAMAxhBwDDEHYAMAxhBwDDEHYAMAxhBwDD9PsBpfYHVQAAgwMvAUOf8dQpMDj1O+z8cA9P
+      /E8NGLw4Y0eftf+FeQCDC2GHl8bGxhs9BAD9RNjRZ7xSFRicCDu8+PpjBwCGFu5jBwDDEHYA
+      MAxhBwDDcI29n1paWlRUVKSqqio5HA61trYqMjJScXFxmj17drd/zPfs2bP64osv9NVXXyky
+      MlJJSUlKSUlRUFCQz+UrKipUXV0t6eofAp40aVKPxnny5EldvnxZkpSYmKjw8PBeHCWAoYSw
+      91Fzc7N2796t/Px8NTc3+1xm9+7dWrVqlVJTU33O37Nnjw4ePOg17dNPP1VcXJyefPJJhYWF
+      dVjnyJEjys7OliSFhIRo06ZNXn8h3heHw6EtW7Z4vl+5cqUWLVrU5ToAhi7C3kd1dXX69NNP
+      FRISou9+97tKSkpSdHS0AgMDZbfb9a9//Uv//ve/9frrr+uZZ57RLbfc4rX+3r17dfDgQUVE
+      RGjVqlVKTk5WTU2NPvzwQxUUFOill17Ss88+q8DAQJ/7Hz9+vMrLy1VSUqKUlJQux9r+lOiE
+      CRN0/vz5ATl+AIMXYe+joKAgrVq1SrfddpsCAgK85o0ePVqJiYmKjIzU/v37lZub6xX2pqYm
+      HTp0SMHBwVq/fr3i4uIkSTfffLMeeughtbS06MSJE8rNzdW3vvUtn/tfsmSJtm/frvz8/B6F
+      3d/fX5mZmYQdGAb48LSPQkNDtXDhwg5Rv9Ztt90mSfr666+9pufm5srlcikzM9MT9XZ+fn66
+      9957JUmffPJJp9uOjY1VfHy8jh8/7rl27ovdbldpaalSU1O5Rx0YJgj7dVRVVSXp6mWTaxUU
+      FEiSbr31Vp/rRUdHa9KkSaqoqFBlZWWn209PT5fL5VJRUVGny7RfhklPT+/V2AEMXYT9Oqmr
+      q9Pu3bslSWlpaV7znE6nxowZ0+Fs/Vrtl1ecTmeny8ybN08Wi8Xzi8IXq9WqoKAgzZgxozfD
+      BzCEcY19gDU1NSk3N1fZ2dlyOBz6wQ9+oGnTpnnmu91u1dXVKT4+vsvttN+OWFtb2+kyY8aM
+      0ZQpU1RcXKympqYOt0hWVlaqvLxct99+e7e3XQIwBz/t/eRwOLR//35dunRJFy9e1IULF3T5
+      8mXdfPPNWrdunebNm+e1fENDg1pbW33eynit9hdsXbp0qcvl0tPTdebMGR07dkzz58/3msdl
+      GGB44lJMPzU3N+uzzz7T559/rsrKSs8HmVOmTFFUVFSH5V0ulyRp1KhRXW63fX5n98i3mzNn
+      jvz9/X1ejrFarYqIiFBycnKPjgWAGThj76fx48frlVdeUUNDg+rq6lRdXa3jx48rJydHH330
+      kb7zne9o+fLlslgskv7/mXhDQ0OX222f392ZfXBwsKZPn67i4mLV19d7tl9WVqaqqiplZWV5
+      9g1geCDsAyAoKEhBQUGeu1nmz58vh8Ohbdu2KTs7WxaLRcuXL5d09Uw8MDBQdXV1XW6zfX5P
+      Hv3PyMjQiRMnVFhY6LnvncswwPDFpZjrJCoqShs2bFBAQIDy8vLkdrs988LDw+V0OtXW1tbp
+      +hcuXPAs253U1FQFBgYqPz/fM81qtSomJkYJCQn9OAoAQxFhv44CAwM1ZcoUXbp0SXa73TN9
+      /Pjxampq0qlTp3yu53a7VVhYKD8/P8XGxna7n4CAAM2aNUvnzp2T0+mUzWZTTU2NMjIyBuxY
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
