@@ -1,0 +1,775 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='chris_rock_movies' inline='true' name='federated.1kvnbhx1ee90nz13vz3150wibxlh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='chris_rock_movies' name='textscan.0rq3ec415otddg17zxjvh1s4trfi'>
+            <connection class='textscan' directory='/Users/ivanyu/Downloads/publicity-movies-sql-master' filename='chris_rock_movies.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0rq3ec415otddg17zxjvh1s4trfi' name='chris_rock_movies.csv' table='[chris_rock_movies#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='tmdb_id' ordinal='0' />
+            <column datatype='string' name='title' ordinal='1' />
+            <column datatype='real' name='release_year' ordinal='2' />
+            <column datatype='date' name='release_date' ordinal='3' />
+            <column datatype='string' name='genres' ordinal='4' />
+            <column datatype='string' name='character' ordinal='5' />
+            <column datatype='integer' name='budget_usd' ordinal='6' />
+            <column datatype='integer' name='revenue_usd' ordinal='7' />
+            <column datatype='integer' name='runtime_min' ordinal='8' />
+            <column datatype='real' name='vote_average' ordinal='9' />
+            <column datatype='integer' name='vote_count' ordinal='10' />
+            <column datatype='real' name='popularity' ordinal='11' />
+            <column datatype='string' name='era' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tmdb_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tmdb_id]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>tmdb_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[release_year]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>release_year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>character</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[character]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>character</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>budget_usd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[budget_usd]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>budget_usd</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue_usd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[revenue_usd]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>revenue_usd</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>runtime_min</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[runtime_min]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>runtime_min</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vote_average</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[vote_average]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>vote_average</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vote_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vote_count]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>vote_count</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popularity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[popularity]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>popularity</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>era</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[era]</local-name>
+            <parent-name>[chris_rock_movies.csv]</parent-name>
+            <remote-alias>era</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='chris_rock_movies.csv' datatype='table' name='[__tableau_internal_object_id__].[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]' role='measure' type='quantitative' />
+      <column caption='Budget Usd' datatype='integer' name='[budget_usd]' role='measure' type='quantitative' />
+      <column caption='Character' datatype='string' name='[character]' role='dimension' type='nominal' />
+      <column caption='Era' datatype='string' name='[era]' role='dimension' type='nominal' />
+      <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+      <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='date' name='[release_date]' role='dimension' type='ordinal' />
+      <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+      <column caption='Revenue Usd' datatype='integer' name='[revenue_usd]' role='measure' type='quantitative' />
+      <column caption='Runtime Min' datatype='integer' name='[runtime_min]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column caption='Tmdb Id' datatype='integer' name='[tmdb_id]' role='dimension' type='ordinal' />
+      <column caption='Vote Average' datatype='real' name='[vote_average]' role='measure' type='quantitative' />
+      <column caption='Vote Count' datatype='integer' name='[vote_count]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/rf/l37tf8fs08xdhdq30_91thtr0000gn/T/tableau-temp/#TableauTemp_0j8dr371s1ge1p1amfcf40is1a5c.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/11/2026 12:33:16 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>tmdb_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[tmdb_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tmdb_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>141</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>1</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>141</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_year</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[release_year]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>release_year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>release_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[release_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>release_date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>138</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>genres</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[genres]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>genres</remote-alias>
+              <ordinal>4</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>character</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[character]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>character</remote-alias>
+              <ordinal>5</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>budget_usd</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[budget_usd]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>budget_usd</remote-alias>
+              <ordinal>6</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue_usd</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[revenue_usd]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue_usd</remote-alias>
+              <ordinal>7</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>48</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>runtime_min</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[runtime_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>runtime_min</remote-alias>
+              <ordinal>8</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>78</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vote_average</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[vote_average]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vote_average</remote-alias>
+              <ordinal>9</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>101</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vote_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vote_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vote_count</remote-alias>
+              <ordinal>10</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>popularity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[popularity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>popularity</remote-alias>
+              <ordinal>11</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>141</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>era</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[era]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>era</remote-alias>
+              <ordinal>12</ordinal>
+              <family>chris_rock_movies.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='chris_rock_movies.csv' id='chris_rock_movies.csv_B6F6DC59C63A41979026342A57424437'>
+            <properties context=''>
+              <relation connection='textscan.0rq3ec415otddg17zxjvh1s4trfi' name='chris_rock_movies.csv' table='[chris_rock_movies#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='tmdb_id' ordinal='0' />
+                  <column datatype='string' name='title' ordinal='1' />
+                  <column datatype='real' name='release_year' ordinal='2' />
+                  <column datatype='date' name='release_date' ordinal='3' />
+                  <column datatype='string' name='genres' ordinal='4' />
+                  <column datatype='string' name='character' ordinal='5' />
+                  <column datatype='integer' name='budget_usd' ordinal='6' />
+                  <column datatype='integer' name='revenue_usd' ordinal='7' />
+                  <column datatype='integer' name='runtime_min' ordinal='8' />
+                  <column datatype='real' name='vote_average' ordinal='9' />
+                  <column datatype='integer' name='vote_count' ordinal='10' />
+                  <column datatype='real' name='popularity' ordinal='11' />
+                  <column datatype='string' name='era' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='chris_rock_movies' name='federated.1kvnbhx1ee90nz13vz3150wibxlh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1kvnbhx1ee90nz13vz3150wibxlh'>
+            <column-instance column='[release_year]' derivation='None' name='[none:release_year:qk]' pivot='key' type='quantitative' />
+            <column caption='Release Year' datatype='real' name='[release_year]' role='dimension' type='quantitative' />
+            <column caption='Revenue Usd' datatype='integer' name='[revenue_usd]' role='measure' type='quantitative' />
+            <column-instance column='[revenue_usd]' derivation='Sum' name='[sum:revenue_usd:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1kvnbhx1ee90nz13vz3150wibxlh].[sum:revenue_usd:qk]</rows>
+        <cols>[federated.1kvnbhx1ee90nz13vz3150wibxlh].[none:release_year:qk]</cols>
+      </table>
+      <simple-id uuid='{D6C58EBF-9913-4AB3-AE48-52C5BDC02976}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1kvnbhx1ee90nz13vz3150wibxlh].[none:release_year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{73886D43-8143-4FE2-A403-7A05A376EF2C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
