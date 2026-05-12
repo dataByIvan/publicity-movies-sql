@@ -1,0 +1,103 @@
+---
+title: "Ezra Miller Combined Plot"
+author: "Matthew Bustos"
+date: "2026-05-12"
+output:
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Plot for The final query in the .sql file. Combines 3 different time series: monthly revenue, monthly movie frequency (how many movies Ezra Miller was involved in), and monthly search interest. Each of these values were scaled by dividing its current value with the max value, transformed into a percentage. For example, if Ezra Miller was in 1 movie during the month of June 2016, then that scaled value would be 0.5 since the max amount of movies he was involved at a time was 2 (1/2 * 100).
+
+```{r}
+
+library(DBI)
+library(RMariaDB)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+# Create connection object
+con <- dbConnect(
+  RMariaDB::MariaDB(),
+  host     = "localhost",      # Or "localhost" if the server is on your machine
+  port     = 3306,             # Default MySQL port
+  user     = "root",  # Usually "root" for local setups
+  password = "sesame80", # do not put password in here. Github etc. 
+  dbname   = "sem_project"
+)
+
+library(ggplot2)
+
+plot_data <- dbGetQuery(con, "WITH monthly_search AS (
+    SELECT
+        DATE_FORMAT(trend_date, '%Y-%m-01') AS month_start,
+        AVG(search_interest) AS avg_search_interest
+    FROM ezra_search_trends
+    GROUP BY month_start
+), monthly_revenue AS (
+    SELECT
+        STR_TO_DATE(DATE_FORMAT(revenue_date, '%Y-%m-01'), '%Y-%m-%d') AS month_start,
+        SUM(daily_revenue) AS total_monthly_revenue
+    FROM ezra_daily_revenue
+    GROUP BY month_start
+), monthly_releases AS (
+	SELECT
+        DATE_FORMAT(release_date, '%Y-%m-01') AS month_start,
+        COUNT(*) AS movies_released
+    FROM ezra
+    GROUP BY month_start
+), combined AS (
+    SELECT
+        s.month_start,
+        s.avg_search_interest,
+        COALESCE(r.total_monthly_revenue, 0) AS total_monthly_revenue,
+        COALESCE(m.movies_released, 0) AS movies_released
+    FROM monthly_search s
+    LEFT JOIN monthly_revenue r
+        ON s.month_start = r.month_start
+    LEFT JOIN monthly_releases m
+        ON s.month_start = m.month_start
+)
+SELECT
+    month_start,
+    avg_search_interest,
+    total_monthly_revenue,
+    movies_released,
+    ROUND(avg_search_interest / MAX(avg_search_interest) OVER () * 100, 2) AS search_index,
+    ROUND(total_monthly_revenue / MAX(total_monthly_revenue) OVER () * 100, 2) AS revenue_index,
+    ROUND(movies_released / MAX(movies_released) OVER () * 100, 2) AS movie_frequency_index
+FROM combined
+ORDER BY month_start;")
+
+plot_data$month_start <- as.Date(plot_data$month_start)
+
+plot_long <- plot_data %>%
+  pivot_longer(
+    cols = c(search_index, revenue_index, movie_frequency_index),
+    names_to = "metric",
+    values_to = "index_value"
+  )
+
+ggplot(plot_long, aes(x = month_start, y = index_value, color = metric)) +
+  geom_line(linewidth = 1) +
+  geom_vline(xintercept = as.Date("2022-06-01"), linetype = "dashed") +
+  labs(
+    title = "Ezra Miller: Search Attention vs Box Office Activity",
+    subtitle = "Metrics are normalized to a 0–100 index for comparison",
+    x = "Month",
+    y = "0-100 Scaled Index",
+    color = "Metric"
+  ) +
+  theme_minimal()
+```
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
