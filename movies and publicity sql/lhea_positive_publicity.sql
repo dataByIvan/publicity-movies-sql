@@ -1,4 +1,4 @@
-/* =====================================================================
+/* 
    LHEA SECTION: POSITIVE PUBLICITY CASE STUDIES
    Author: Lhea
 
@@ -31,7 +31,7 @@
       - Created manually for this section because A Minecraft Movie (2025)
         may not appear in movies_clean yet.
       - Also lets me compare all three movies in one place.
-   ===================================================================== */
+  */
 
 USE case_studies;
 
